@@ -2,7 +2,23 @@
 <html lang="ja">
 <head>
     <link rel="stylesheet" href="https://mtbook1010.github.io/portfolio/css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.pagepiling.css" />
+    <script>
+        $(function() {
+            $('#pagepiling').pagepiling({
+                menu: '#nav',
+                sectionSelector: '.section',
+                sectionsColor: ['#fff', '#eee', '#ddd', '#ccc'],
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                navigation: {
+                    'textColor': '#000',
+                    'bulletsColor': '#000',
+                    'position': 'right',
+                    'tooltips': ['page1', 'page2', 'page3', 'page4']
+                },
+            });
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ymmt</title>
@@ -35,7 +51,6 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="js/jquery.pagepiling.js"></script>
-
+    <script type="text/javascript" src="./js/jquery.pagepiling.js"></script>
 </body>
 </html>
