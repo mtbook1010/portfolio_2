@@ -3,9 +3,10 @@
 }
 
 html{
-    width: 100vw;
+    width: 100%;
 }
 
 .top-img{
-    width: 100vw;
+    width: 100%;
+    overflow: hidden;
 }
