@@ -6,7 +6,7 @@
  *
  * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
  */
-html, body {
+ html, body {
     overflow:hidden;
     margin:0;
     padding:0;
@@ -97,15 +97,18 @@ html, body {
 #pp-nav li .active span,
 .pp-slidesNav .active span {
     background: #333;
+    width: 6px;
+    height: 6px;
+    left: 0px;
+    
 }
 #pp-nav span,
 .pp-slidesNav span {
     top: 2px;
     left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
+    width: 2px;
+    height: 2px;
+    background: #333;
     border-radius: 50%;
     position: absolute;
     z-index: 1;

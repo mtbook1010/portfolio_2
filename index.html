@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <link rel="stylesheet" href="https://mtbook1010.github.io/portfolio/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://mtbook1010.github.io/portfolio/css/jquery.pagepiling.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100&display=swap&subset=japanese" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ymmt</title>
+    <nav>
+        <ul id="nav">
+            <li data-menuanchor="page1" class="active"><a href="#page1">TOP</a></li>
+            <li data-menuanchor="page2"><a href="#page2">ABOUT</a></li>
+            <li data-menuanchor="page3"><a href="#page3">PRODUCT</a></li>
+            <li data-menuanchor="page4"><a href="#page4">INFO</a></li>
+        </ul>
+            <div class = "border"></div>
+    </nav>
+
 </head>
 <body>
 
     <div id="pagepiling">
 
-        <div class="section">
-            Some section
+        <div class="section section1">
+            <img src="img/006.png" class="top-logo-img">
         </div>
 
 
-        <div class="section">
-            <img src="https://mtbook1010.github.io/portfolio/img/01.png" class="top-img">
+        <div class="section section2">
+            <p class="page-t">ABOUT</p>
+            <span>
+                ymmtは原料成分にこだわった天然由来の美容用品を提供します。<br>- ymmt provides beauty products of natural origin that are particular about the ingredients. -
+            </span>
+            <img src="img/01.png" class="top-img">
         </div>
 
 
-        <div class="section">
-            Some section
+        <div class="section section3">
+            <p class="page-t">PRODUCT</p>
         </div>
 
 
-        <div class="section">
-            Some section
+        <div class="section section4">
+            <p class="page-t">INFO</p>
         </div>
 
     </div>
@@ -35,23 +52,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-    <script type="text/javascript" src="https://mtbook1010.github.io/portfolio/js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
     <script>
         $(function() {
             $('#pagepiling').pagepiling({
                 menu: '#nav',
                 sectionSelector: '.section',
-                sectionsColor: ['#fff', '#eee', '#ddd', '#ccc'],
                 anchors: ['page1', 'page2', 'page3', 'page4'],
+                loopBottom: true,
                 navigation: {
-                    'textColor': '#000',
-                    'bulletsColor': '#000',
-                    'position': 'right',
-                    'tooltips': ['page1', 'page2', 'page3', 'page4']
+                    'textColor': '#404040',
+                    'bulletsColor': '#404040',
+                    'position': 'left'
                 },
             });
         });
         </script>
-        
 </body>
 </html>
