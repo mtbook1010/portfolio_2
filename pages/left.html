@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100&display=swap&subset=japanese" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ymmt moisturizer</title>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <p class="page-t"><span class = "dot">.</span>ymmt moisturizer</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/fakeLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+    <script>
+    new Vivus('mask', {type: 'scenario-sync',duration: 100,forceRender: false ,animTimingFunction:Vivus.EASE})
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+    <script>
+
+        $(function () {
+
+            $('#pagepiling').pagepiling({
+              menu: '#nav',
+              sectionSelector: '.section',
+              anchors: ['page1', 'page2', 'page3', 'page4'],
+              afterLoad: function (anchorLink, index) {
+                //using anchorLink
+                if (anchorLink == 'page2') {
+                  $('.fadein700').fadeIn(700);
+                }
+                if (anchorLink == 'page3') {
+                  $('.fadein700-2').fadeIn(700);
+                }
+              },
+              loopBottom: true,
+              navigation: {
+                'textColor': '#404040',
+                'bulletsColor': '#404040',
+                'position': 'left'
+              },
+            });
+          });
+
+          var cursor = $(".cursor"),
+            cWidth = 20, //カーソルの大きさ
+            mouseX = 0, //マウスのX座標
+            mouseY = 0; //マウスのY座標
+          $(document).on('mousemove', function (e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+            cursor.css({
+              //カーソルの真ん中に座標軸が来るよう、
+              //カーソルの大きさの半分を引きます
+              left: mouseX - (cWidth / 2),
+              top: mouseY - (cWidth / 2)
+            })
+          });
+
+          $(function(){
+
+//ローディング処理
+$(document).ready(function(){
+    $("#fakeloader").fakeLoader({
+        timeToHide: 1200,
+        spinner: "spinner3",
+        bgColor: "#1abc9c"
+    });
+});
+});
+        
+        </script>
+</body>
+</html>
