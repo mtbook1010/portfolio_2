@@ -1,11 +1,34 @@
 *{
     margin: 0;
+    cursor: none !important;
 }
 
 html{
     width: 100%;
     height: 100vh;
     font-family: 'Sen', sans-serif;
+}
+
+body{
+    cursor: none !important;
+}
+
+html body a{
+    cursor: none !important;
+}
+
+
+.cursor {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0; 
+  background: #42b65c;
+  z-index: 9999;
+  cursor: none !important;
+  pointer-events: none;
 }
 
 nav{
@@ -31,6 +54,12 @@ nav li a{
     color: #282828;
     font-family: 'Sen', sans-serif;
     font-weight: 700;
+    transition: 0.3s;
+}
+
+nav li a:hover{
+    color: #42b65c;
+    transition: 0.3s ease-in-out;
 }
 
 .border{
@@ -53,7 +82,6 @@ nav li a{
 }
 
 .section1{
-    background-image: url(../img/007.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -93,27 +121,31 @@ nav li a{
     position: absolute;
     width: 8vw;
     height: 3vw;
-    top: 34.5vw;
-    left: 31vw;
+    top: 29vw;
+    left: 34.5vw;
     font-size: 1vw;
     font-weight: 400;
     letter-spacing: 0.3vw;
     z-index: 100;
     background: none;
-    transition: 0.5s;
+    transition: 0.3s;
     border-top: 0px solid #282828;
-    border-right: 2px double #282828;
-    border-bottom: 2px double #282828;
+    border-right: 2px solid #282828;
+    border-bottom: 2px solid #282828;
     border-left: 0px solid #282828;
 }
 
 .more-b:hover{
     color: #e3e3e3;
     background: #282828;
-    -webkit-transition: 0.8s ease-in-out;
-    -moz-transition: 0.8s ease-in-out;
-    -o-transition: 0.8s ease-in-out;
-    transition: 0.8s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.dot{
+    color: #42b65c;
 }
 
 .page-t{
@@ -126,7 +158,7 @@ nav li a{
     z-index: 9999;
 }
 
-.section span{
+.section .page-cts{
     display: block;
     position: absolute;
     background: rgba(250, 250, 250, 1);

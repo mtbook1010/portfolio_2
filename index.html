@@ -24,6 +24,8 @@
 
 </head>
 <body>
+    	
+  <div class="cursor"></div>
 
     <div id="pagepiling">
 
@@ -33,14 +35,12 @@
 
 
         <div class="section section2">
-            <p class="page-t">.about</p>
-            <span class = "fadein700" style="display: none">
+            <p class="page-t"><span class = "dot">.</span>about</p>
+            <span class = "page-cts fadein700" style="display: none">
                 肌は季節、環境、ライフスタイルなどの影響を強く受け、それらは常に変化しています。そのため、その時々の「肌状態」に応じてケアすることが重要です。
                 ymmtは原料成分にこだわり抜いた天然由来の美容用品を提供します。<br><br>- Skin is strongly influenced by seasons, environment, lifestyle, etc., which are constantly changing. Therefore, it is important to care according to the "skin condition" at that time.
                 ymmt provides beauty products of natural origin that focus on raw ingredients. -
             </span>
-            <img src="img/011.png" class="top-img-s fadein700" style="display: none">
-            <div class = "d1 fadein700" style="display: none"></div>
             <button class = "more-b fadein700" style="display: none">more</button>
         </div>
 
@@ -85,6 +85,25 @@
                         },
                     });
                 });
+      </script>
+
+      <script>
+          var
+cursor = $(".cursor"),
+cWidth = 20, //カーソルの大きさ
+mouseX = 0, //マウスのX座標
+mouseY = 0; //マウスのY座標
+
+$(document).on('mousemove', function(e) {
+  mouseX = e.pageX;
+  mouseY = e.pageY;
+  cursor.css({
+    //カーソルの真ん中に座標軸が来るよう、
+    //カーソルの大きさの半分を引きます
+    left: mouseX - (cWidth / 2),
+    top: mouseY - (cWidth / 2)
+  })
+});
       </script>
 </body>
 </html>
