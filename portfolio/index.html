@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <style type="text/css">
+        #path848{fill:none;stroke:#6c6c6c;stroke-width:1.16499996;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1};
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100&display=swap&subset=japanese" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ymmt</title>
+    <nav>
+        <ul id="nav">
+            <li data-menuanchor="page1" class="active"><a href="#page1">top</a></li>
+            <li data-menuanchor="page2"><a href="#page2">about</a></li>
+            <li data-menuanchor="page3"><a href="#page3">product</a></li>
+            <li data-menuanchor="page4"><a href="#page4">info</a></li>
+        </ul>
+            <div class = "border"></div>
+    </nav>
+
+</head>
+<body>
+    	
+  <div class="cursor"></div>
+
+    <div id="pagepiling">
+
+        <div class="section section1">
+            <img src="img/006.png" class="top-logo-img">
+        </div>
+
+
+        <div class="section section2">
+            <p class="page-t"><span class = "dot">.</span>about</p>
+            <span class = "page-cts fadein700" style="display: none">
+                肌は季節、環境、ライフスタイルなどの影響を強く受け、それらは常に変化しています。そのため、その時々の「肌状態」に応じてケアすることが重要です。
+                ymmtは原料成分にこだわり抜いた天然由来の美容用品を提供します。<br><br>- Skin is strongly influenced by seasons, environment, lifestyle, etc., which are constantly changing. Therefore, it is important to care according to the "skin condition" at that time.
+                ymmt provides beauty products of natural origin that focus on raw ingredients. -
+            </span>
+            <button class = "more-b fadein700" style="display: none">more</button>
+        </div>
+
+
+        <div class="section section3">
+            <p class="page-t">.product</p>
+        </div>
+
+
+        <div class="section section4">
+            <p class="page-t">.info</p>
+        </div>
+
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+    <script>
+    new Vivus('mask', {type: 'scenario-sync',duration: 100,forceRender: false ,animTimingFunction:Vivus.EASE})
+    </script>
+
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+    <script>
+                $(function() {
+                    $('#pagepiling').pagepiling({
+                        menu: '#nav',
+                        sectionSelector: '.section',
+                        anchors: ['page1', 'page2', 'page3', 'page4'],
+                    afterLoad: function(anchorLink, index){
+                        //using anchorLink
+                        if(anchorLink == 'page2'){
+                            $('.fadein700').fadeIn(700);
+                            $('.fadein3000').fadeIn(3000);
+                            }
+                        },
+                        loopBottom: true,
+                        navigation: {
+                            'textColor': '#404040',
+                            'bulletsColor': '#404040',
+                            'position': 'left'
+                        },
+                    });
+                });
+      </script>
+
+      <script>
+          var
+cursor = $(".cursor"),
+cWidth = 20, //カーソルの大きさ
+mouseX = 0, //マウスのX座標
+mouseY = 0; //マウスのY座標
+
+$(document).on('mousemove', function(e) {
+  mouseX = e.pageX;
+  mouseY = e.pageY;
+  cursor.css({
+    //カーソルの真ん中に座標軸が来るよう、
+    //カーソルの大きさの半分を引きます
+    left: mouseX - (cWidth / 2),
+    top: mouseY - (cWidth / 2)
+  })
+});
+      </script>
+</body>
+</html>
