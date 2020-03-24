@@ -12,8 +12,11 @@
 </head>
 
 <body>
+  <div id = "pages-all" class="fadein1400" style="display: none">
     <div class="cursor"></div>
     <p class="page-t"><span class = "dot">.</span>ymmt cream</p>
+    <img src="../img/01.png" class="pages-img1">
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/fakeLoader.min.js"></script>
@@ -27,27 +30,9 @@
 
         $(function () {
 
-            $('#pagepiling').pagepiling({
-              menu: '#nav',
-              sectionSelector: '.section',
-              anchors: ['page1', 'page2', 'page3', 'page4'],
-              afterLoad: function (anchorLink, index) {
-                //using anchorLink
-                if (anchorLink == 'page2') {
-                  $('.fadein700').fadeIn(700);
-                }
-                if (anchorLink == 'page3') {
-                  $('.fadein700-2').fadeIn(700);
-                }
-              },
-              loopBottom: true,
-              navigation: {
-                'textColor': '#404040',
-                'bulletsColor': '#404040',
-                'position': 'left'
-              },
-            });
-          });
+          window.onload = function () {
+          $('.fadein1400').fadeIn(1400);
+        };
 
           var cursor = $(".cursor"),
             cWidth = 20, //カーソルの大きさ
@@ -64,17 +49,7 @@
             })
           });
 
-          $(function(){
-
-//ローディング処理
-$(document).ready(function(){
-    $("#fakeloader").fakeLoader({
-        timeToHide: 1200,
-        spinner: "spinner3",
-        bgColor: "#1abc9c"
-    });
-});
-});
+        });
         
         </script>
 </body>
