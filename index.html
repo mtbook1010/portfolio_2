@@ -15,7 +15,6 @@
             <li data-menuanchor="page1" class="active"><a href="#page1">top</a></li>
             <li data-menuanchor="page2"><a href="#page2">about</a></li>
             <li data-menuanchor="page3"><a href="#page3">product</a></li>
-            <li data-menuanchor="page4"><a href="#page4">info</a></li>
         </ul>
             <div class = "border-vertical"></div>
     </nav>
@@ -56,11 +55,6 @@
             </div>
         </div>
 
-
-        <div class="section section4">
-            <p class="page-t"><span class = "dot">.</span>info</p>
-        </div>
-
     </div>
     
 
@@ -80,7 +74,7 @@
             $('#pagepiling').pagepiling({
               menu: '#nav',
               sectionSelector: '.section',
-              anchors: ['page1', 'page2', 'page3', 'page4'],
+              anchors: ['page1', 'page2', 'page3'],
               afterLoad: function (anchorLink, index) {
                 //using anchorLink
                 if (anchorLink == 'page2') {
