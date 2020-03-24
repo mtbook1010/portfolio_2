@@ -43,7 +43,7 @@ html{
     .border-vertical{
         position: absolute;
         right: 4vw;
-        width: 2.5px;
+        width: 0.5vw;
         height: 12vw;
         background: #282828;
         margin-top: 1.8vw;
@@ -104,10 +104,8 @@ html{
     
     .more-b{
         position: absolute;
-        width: 25vw;
-        height: 2vw;
-        top: 79vw;
-        right: 10vw;
+        top: 80vw;
+        right: 5vw;
         font-size: 5vw;
         font-weight: 400;
         letter-spacing: 1vw;
@@ -140,16 +138,17 @@ html{
         letter-spacing: 0.2vw;
     }
     
+
+    
     .section .page-cts{
         display: block;
         position: absolute;
-        background: rgba(250, 250, 250, 0.85);
-        width: 45vw;
+        top: 20vw;
+        left: 5vw;
+        width: 80vw;
         padding: 6vw 4vw 6vw 4vw;
-        left: 13vw;
-        top: 18vw;
         color: #282828;
-        font-size: 2.5vw;
+        font-size: 3vw;
         font-weight: 100;
         font-family: 'Noto Sans JP', sans-serif;
         letter-spacing: 0.2vw;
@@ -161,7 +160,7 @@ html{
         object-fit: cover;
         width: 100vw;
         right: 0px;
-        bottom: 15vw;
+        top: 90vw;
     }
     
     .product-img-m{
@@ -322,9 +321,7 @@ nav li a:hover{
 
 .more-b{
     position: absolute;
-    width: 8vw;
-    height: 3vw;
-    top: 29vw;
+    top: 30vw;
     left: 34.5vw;
     font-size: 1vw;
     font-weight: 400;
@@ -332,16 +329,11 @@ nav li a:hover{
     z-index: 100;
     background: none;
     transition: 0.3s;
-    border-top: 0px solid #282828;
-    border-right: 0px solid #282828;
-    border-bottom: 2px solid #282828;
-    border-left: 0px solid #282828;
+    border: none;
 }
 
 .more-b:hover{
-    color: #e3e3e3;
-    background: #42b65c;
-    border-bottom: 2px solid #42b65c;
+    color: #42b65c;
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
